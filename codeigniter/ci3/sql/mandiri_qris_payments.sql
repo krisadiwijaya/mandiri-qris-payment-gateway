@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `mandiri_qris_payments` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `qr_id` varchar(255) NOT NULL,
+  `reference` varchar(255) NOT NULL,
+  `qr_string` text NOT NULL,
+  `qr_image_url` varchar(500) NOT NULL,
+  `amount` decimal(15,2) NOT NULL,
+  `status` enum('PENDING','COMPLETED','EXPIRED','FAILED') NOT NULL DEFAULT 'PENDING',
+  `transaction_id` varchar(255) DEFAULT NULL,
+  `paid_at` datetime DEFAULT NULL,
+  `expired_at` datetime NOT NULL,
+  `metadata` text DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `qr_id` (`qr_id`),
+  UNIQUE KEY `reference` (`reference`),
+  KEY `status` (`status`),
+  KEY `created_at` (`created_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

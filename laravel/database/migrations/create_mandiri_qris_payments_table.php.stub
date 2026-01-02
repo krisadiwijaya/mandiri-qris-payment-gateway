@@ -1,0 +1,44 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateMandiriQrisPaymentsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('mandiri_qris_payments', function (Blueprint $table) {
+            $table->id();
+            $table->string('qr_id')->unique();
+            $table->string('reference')->unique();
+            $table->text('qr_string');
+            $table->string('qr_image_url');
+            $table->decimal('amount', 15, 2);
+            $table->enum('status', ['PENDING', 'COMPLETED', 'EXPIRED', 'FAILED'])->default('PENDING');
+            $table->string('transaction_id')->nullable();
+            $table->timestamp('paid_at')->nullable();
+            $table->timestamp('expired_at');
+            $table->json('metadata')->nullable();
+            $table->timestamps();
+            
+            $table->index('status');
+            $table->index('created_at');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('mandiri_qris_payments');
+    }
+}

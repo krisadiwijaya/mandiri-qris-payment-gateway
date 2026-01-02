@@ -1,0 +1,44 @@
+{
+    "name": "mandiri-qris/php-native-sdk",
+    "description": "PHP Native SDK for Mandiri QRIS Payment Gateway",
+    "version": "1.0.0",
+    "type": "library",
+    "keywords": ["mandiri", "qris", "payment", "gateway", "indonesia", "bank"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "vlucas/phpdotenv": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MandiriQris\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MandiriQris\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "example:create": "php examples/create_qris.php",
+        "example:status": "php examples/check_status.php",
+        "serve": "php -S localhost:8000 -t examples/"
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}

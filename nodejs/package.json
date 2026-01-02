@@ -1,0 +1,79 @@
+{
+  "name": "mandiri-qris-nodejs",
+  "version": "1.0.0",
+  "description": "Node.js SDK for Mandiri QRIS Payment Gateway",
+  "main": "src/MandiriQris.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "start": "node examples/express-app.js",
+    "dev": "nodemon examples/express-app.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix"
+  },
+  "keywords": [
+    "mandiri",
+    "qris",
+    "payment",
+    "gateway",
+    "indonesia",
+    "bank",
+    "nodejs",
+    "express"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mandiri-qris-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/mandiri-qris-nodejs/issues"
+  },
+  "homepage": "https://github.com/yourusername/mandiri-qris-nodejs#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0",
+    "eslint": "^8.50.0",
+    "supertest": "^6.3.3",
+    "@types/node": "^20.8.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.js",
+      "**/?(*.)+(spec|test).js"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es2021": true,
+      "jest": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": ["error", 4],
+      "quotes": ["error", "single"],
+      "semi": ["error", "always"]
+    }
+  }
+}
