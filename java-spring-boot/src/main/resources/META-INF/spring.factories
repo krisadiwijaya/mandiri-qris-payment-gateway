@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+id.co.mandiri.qris.MandiriQrisAutoConfiguration

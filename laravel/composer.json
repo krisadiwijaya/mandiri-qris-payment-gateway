@@ -1,0 +1,35 @@
+{
+    "name": "mandiri/qris-laravel",
+    "description": "Laravel integration for Mandiri QRIS Payment Gateway",
+    "type": "library",
+    "keywords": ["laravel", "mandiri", "qris", "payment", "gateway"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "krisadiwijaya",
+            "email": "krisadiwijaya@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+        "ext-json": "*",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MandiriQris\\Laravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MandiriQris\\Laravel\\ServiceProvider"
+            ],
+            "aliases": {
+                "MandiriQris": "MandiriQris\\Laravel\\Facades\\MandiriQris"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}

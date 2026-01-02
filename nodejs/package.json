@@ -1,0 +1,29 @@
+{
+  "name": "mandiri-qris",
+  "version": "1.0.0",
+  "description": "Mandiri QRIS Payment Gateway SDK for Node.js",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mandiri",
+    "qris",
+    "payment",
+    "gateway",
+    "indonesia"
+  ],
+  "author": "krisadiwijaya",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krisadiwijaya/mandiri-qris-payment-gateway"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "mandiri/qris-php",
+    "description": "Mandiri QRIS Payment Gateway SDK for PHP",
+    "type": "library",
+    "keywords": ["mandiri", "qris", "payment", "gateway", "indonesia"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "krisadiwijaya",
+            "email": "krisadiwijaya@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MandiriQris\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MandiriQris\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable"
+}
